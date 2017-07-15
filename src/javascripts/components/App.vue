@@ -1,16 +1,15 @@
 <template>
-  <div class="container">
-    {{ message }}
+  <div id="app" class="wrapper">
+    <app-header></app-header>
+
+    <router-view></router-view>
   </div>
 </template>
 
-
 <script>
+  import AppHeader from './Header';
+
   export default {
-    data() {
-      return {
-        message: 'Hello'
-      }
-    }
+    components: { AppHeader }
   }
 </script>
