@@ -1,0 +1,1 @@
+export const SET_HOSTESSES_LIST = 'SET_HOSTESSES_LIST';

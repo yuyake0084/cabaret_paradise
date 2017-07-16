@@ -21,18 +21,20 @@
     "vue-loader": "^12.2.2",
     "vue-router": "^2.7.0",
     "vue-template-compiler": "^2.4.1",
-    "webpack": "^3.2.0"
+    "vuex": "^2.3.1",
+    "webpack": "^3.2.0",
+    "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "body-parser": "~1.17.1",
+    "cheerio-httpcli": "^0.7.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "ejs": "~2.5.6",
     "express": "~4.15.2",
     "morgan": "~1.8.1",
-    "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
-    "path": "^0.12.7",
     "serve-favicon": "^2.4.3"
   }
 }

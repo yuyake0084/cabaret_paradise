@@ -2,6 +2,7 @@
   <div id="app" class="wrapper">
     <app-header></app-header>
 
+    <!-- routerで定義しているパスに対してのコンポーネントをここに渡している -->
     <router-view></router-view>
   </div>
 </template>
@@ -13,3 +14,9 @@
     components: { AppHeader }
   }
 </script>
+
+<style>
+  body {
+    background-color: #f5f5f5;
+  }
+</style>
