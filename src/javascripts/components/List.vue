@@ -30,7 +30,9 @@
   }
 
   .list > li {
-    width: 20%;
+    width: 33.3%;
+    padding: 1vw 1.3vw;
+    box-sizing: border-box;
   }
 
   .list img {
