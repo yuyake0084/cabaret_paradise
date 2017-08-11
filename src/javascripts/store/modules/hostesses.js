@@ -20,6 +20,14 @@ const actions = {
     const hostesses = data.data;
 
     commit(types.SET_HOSTESSES_LIST, { hostesses });
+  },
+
+  async fetchAbout({ commit }, payload) {
+    const { data } = await axios.get(`/api/${payload}`).catch(err => {
+      console.log(err);
+    });
+
+    console.log(data)
   }
 };
 
