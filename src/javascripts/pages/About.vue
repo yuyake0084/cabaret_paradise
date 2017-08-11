@@ -1,24 +1,17 @@
 <template>
   <div>
-    <h2 class="ttl">Index</h2>
-    <vue-list></vue-list>
+    {{ this.$route.params.id }}
   </div>
 </template>
 
 <script>
   import { mapGetters, mapActions } from 'vuex';
-  import VueList from '../components/List';
-
   export default {
     created() {
-      this.$store.dispatch('fetchListAll');
-      /**
-       * 取得してきたデータをcommit
-       **/
-      // this.$store.commit('SET_LIST', data);
+      this.$store.dispatch('fetchAbout', this.$route.params.id);
     },
 
-    components: { VueList }
+    // components: { VueList }
   }
 </script>
 
