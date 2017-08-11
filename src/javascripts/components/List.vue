@@ -1,10 +1,12 @@
 <template>
   <ul class="list">
     <li v-for="h in hostesses">
-      <figure>
-        <img v-bind:src="h.src" />
-      </figure>
-      <h3>{{ h.name }}</h3>
+      <router-link :to="h.id">
+        <figure>
+          <img :src="h.src" />
+        </figure>
+        <h3>{{ h.name }}</h3>
+      </router-link>
     </li>
   </ul>
 </template>
@@ -15,11 +17,7 @@
   export default {
     computed: mapGetters({
       hostesses: 'setList' // modules内のgetters呼び出し
-    }),
-
-    created() {
-      this.$store.dispatch('fetchListAll');
-    }
+    })
   }
 </script>
 
