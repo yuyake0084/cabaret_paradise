@@ -7,6 +7,8 @@
 
 <script>
   import { mapGetters, mapActions } from 'vuex';
+  import axios from 'axios';
+
   import VueList from '../components/List';
 
   export default {
