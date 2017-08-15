@@ -1,17 +1,16 @@
 <template>
-  <div>
-    {{ this.$route.params.id }}
-  </div>
+  <vue-profile></vue-profile>
 </template>
 
 <script>
   import { mapGetters, mapActions } from 'vuex';
+  import VueProfile from '../components/Profile';
   export default {
     created() {
       this.$store.dispatch('fetchAbout', this.$route.params.id);
     },
 
-    // components: { VueList }
+    components: { VueProfile }
   }
 </script>
 
