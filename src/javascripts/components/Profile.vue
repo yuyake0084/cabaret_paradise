@@ -3,7 +3,7 @@
     <div id="primary" class="primary-content">
       <div class="img-wrapper">
         <figure class="img-aria">
-          <img src="data.data.src">
+          <img :src="data.data.src">
         </figure>
       </div>
       <div class="right-content">
