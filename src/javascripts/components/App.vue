@@ -1,16 +1,22 @@
 <template>
-  <div class="container">
-    {{ message }}
+  <div id="app" class="wrapper">
+    <app-header></app-header>
+
+    <!-- routerで定義しているパスに対してのコンポーネントをここに渡している -->
+    <router-view></router-view>
   </div>
 </template>
 
-
 <script>
+  import AppHeader from './Header';
+
   export default {
-    data() {
-      return {
-        message: 'Hello'
-      }
-    }
+    components: { AppHeader }
   }
 </script>
+
+<style>
+  body {
+    background-color: #f5f5f5;
+  }
+</style>
