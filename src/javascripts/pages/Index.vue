@@ -63,6 +63,11 @@
     font-size: 20px;
   }
 
+  li:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
   img {
     vertical-align: bottom;
   }
