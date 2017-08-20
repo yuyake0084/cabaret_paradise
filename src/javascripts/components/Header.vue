@@ -1,6 +1,6 @@
 <template>
-  <header>
-    <h1>header</h1>
+  <header class="lyt-header">
+    <h1></h1>
   </header>
 </template>
 
@@ -10,6 +10,8 @@
 
 <style>
   header {
+    height: 60px;
+    box-sizing: border-box;
     padding: 20px 10px;
     background-color: #000;
     color: #FFD700;
