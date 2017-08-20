@@ -31,6 +31,9 @@
           <p class="info-title">バスト</p>
           <div class="info-text">{{ data.data.bust }}</div>
         </div>
+        <from>
+          <input type="submit" value="写真の年齢は？" class="btn2">
+        </from>
       </div>
     </div>
   </div>
@@ -121,6 +124,21 @@
 
 .info-text {
   margin: 0 0 30px 0;
+}
+
+.btn2 {
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  display: block;
+  text-decoration: none;
+  height:35px;
+  width: 240px;
+  vertical-align: middle;
+  text-align: center;
+  color: #cbbe9c;
+  background-color:#000;
+  font-size: 20px;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius:5px;
 }
 
 </style>
