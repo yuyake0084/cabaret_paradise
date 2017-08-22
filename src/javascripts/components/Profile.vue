@@ -50,7 +50,7 @@
 
 <script>
   import { mapGetters, mapActions } from 'vuex';
-  import VueFacedata from './FaceData';
+  import VueFacedata from './Facedata';
 
   export default {
     computed: mapGetters({
