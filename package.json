@@ -7,7 +7,7 @@
     "dev": "npm-run-all server & npm-run-all watch",
     "server": "nodemon ./bin/www",
     "watch": "webpack --watch",
-    "build": "webpack --progress"
+    "build": "node_modules/.bin/webpack --progress"
   },
   "repository": "https://github.com/yuyake0084/face_app.git",
   "author": "yuyake0084 <yuyake0084@gmail.com>",
