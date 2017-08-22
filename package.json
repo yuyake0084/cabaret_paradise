@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "deploy": "npm-run-all server & npm-run-all build",
     "dev": "npm-run-all server & npm-run-all watch",
     "server": "nodemon ./bin/www",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "build": "webpack --progress -p --verbose"
   },
   "repository": "https://github.com/yuyake0084/face_app.git",
   "author": "yuyake0084 <yuyake0084@gmail.com>",
