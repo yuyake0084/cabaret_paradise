@@ -12,6 +12,11 @@ const render = require('./api/render');
 const app = express();
 const router = express.Router();
 
+const host = process.env.NODE_ENV === 'production' ?
+  'https://cabaret-paradise.herokuapp.com'
+:
+  'http://localhost:4000';
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
