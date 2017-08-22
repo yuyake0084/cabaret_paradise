@@ -1,2 +1,4 @@
 export const SET_HOSTESSES_LIST = 'SET_HOSTESSES_LIST';
 export const SET_HOSTESS_DATA = 'SET_HOSTESS_DATA';
+export const SET_FACE_DATA = 'SET_FACE_DATA';
+export const RESET_FACE_DATA = 'RESET_FACE_DATA';

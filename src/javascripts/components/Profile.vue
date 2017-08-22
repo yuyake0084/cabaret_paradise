@@ -1,9 +1,12 @@
 <template>
   <div id="content" class="detail">
-    <div id="primary" class="primary-content">
+    <div id="primary" class="primary-content clearfix">
       <div class="img-wrapper">
-        <figure class="img-aria">
-          <img :src="data.data.src">
+        <figure class="img-area">
+          <img :src="data.data.src" class="img-area__img">
+
+          <vue-facedata v-if="faceData.faceRectangle !== null"></vue-facedata>
+
         </figure>
       </div>
       <div class="right-content">
@@ -31,6 +34,15 @@
           <p class="info-title">バスト</p>
           <div class="info-text">{{ data.data.bust }}</div>
         </div>
+
+        <form>
+          <input
+            type="submit"
+            value="写真の年齢は？"
+            class="btn2"
+            v-on:click.prevent="getAge(data.data.src)"
+          />
+        </form>
       </div>
     </div>
   </div>
@@ -38,89 +50,92 @@
 
 <script>
   import { mapGetters, mapActions } from 'vuex';
+  import VueFacedata from './FaceData';
 
   export default {
     computed: mapGetters({
-      data: 'setData' // modules内のgetters呼び出し
-    })
+      data: 'setData', // modules内のgetters呼び出し
+      faceData: 'setFaceData'
+    }),
+
+    methods: {
+      getAge(imgPath) {
+        this.$store.dispatch('getAge', imgPath);
+      }
+    },
+
+    components: { VueFacedata }
   }
 </script>
 
-<style>
-.clearfix:after {
-  display: block;
-  clear: both;
-  content: '';
-}
+<style lang="scss">
+  #content.detail,
+  #primary {
+    position: static;
+    height: auto;
+  }
 
-.wrapper {
-  padding: 0;
-}
+  .primary-content {
+    width: auto;
+    border-left: none;
+    margin: 0 0 50px 0;
+    height: auto;
+  }
 
-.header {
-  z-index: 9999;
-  padding: 0 0 41px 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: black;
-  width: auto;
-}
+  .img {
+    &-wrapper {
+      float: left;
+      margin: 0 75px 0 0;
+    }
 
-.header h1 {
-  font-weight: bold;
-  font-family: arial;
-}
+    &-area {
+      float: left;
+      position: relative;
+      margin-top: 50px;
 
-#content.detail,
-#primary {
-  position: static;
-  height: auto;
-}
+      &__img {
+        width: 450px;
+      }
+    }
+  }
 
-.primary-content {
-  width: auto;
-  border-left: none;
-  margin: 0 0 50px 0;
-  height: auto;
-}
+  .right-content {
+    float: right;
+    margin-top: 50px;
+    width: 455px;
+  }
 
-.img-aria {
-  width: 455px;
-  margin: 0 75px 0 0;
-  float: left;
-  position: relative;
-}
-.img-aria img {
-  width: 455px;
-  margin-top: 50px;
-}
+  .woman-information {
+    width: 410px;
+  }
 
-.img-wrapper {
-  width: 940px;
-  margin: 0 auto;
-}
+  .info {
+    &-title {
+      border-bottom: 1px solid #000;
+      margin: 0 0 15px 0;
+      padding-bottom: 5px;
+      position: relative;
+      font-size: 12px;
+    }
 
-.right-content {
-  float: left;
-  margin-top: 50px;
-  width: 455px;
-}
+    &-text {
+      margin: 0 0 30px 0;
+    }
+  }
 
-.woman-information {
-  width: 410px;
-}
-
-.info-title {
-  border-bottom: 1px solid #000;
-  margin: 0 0 15px 0;
-  padding-bottom: 5px;
-  position: relative;
-  font-size: 12px;
-}
-
-.info-text {
-  margin: 0 0 30px 0;
-}
+  .btn2 {
+    display: block;
+    text-decoration: none;
+    height: 35px;
+    width: 240px;
+    vertical-align: middle;
+    text-align: center;
+    color: #cbbe9c;
+    background-color:#000;
+    font-size: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
 </style>
