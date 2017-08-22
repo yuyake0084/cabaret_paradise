@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all server & npm-run-all build",
+    "start": "node ./bin/www & npm-run-all build",
     "dev": "npm-run-all server & npm-run-all watch",
     "server": "nodemon ./bin/www",
     "watch": "webpack --watch",
