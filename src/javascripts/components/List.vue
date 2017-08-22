@@ -17,7 +17,11 @@
   export default {
     computed: mapGetters({
       hostesses: 'setList' // modules内のgetters呼び出し
-    })
+    }),
+
+    created() {
+      this.$store.dispatch('fetchListAll');
+    }
   }
 </script>
 
