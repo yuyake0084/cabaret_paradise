@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www & npm-run-all build",
+    "start": "node ./bin/www & node_modules/.bin/webpack --progress",
     "dev": "npm-run-all server & npm-run-all watch",
     "server": "nodemon ./bin/www",
-    "watch": "webpack --watch",
-    "build": "node_modules/.bin/webpack --progress"
+    "watch": "webpack --watch"
   },
   "repository": "https://github.com/yuyake0084/face_app.git",
   "author": "yuyake0084 <yuyake0084@gmail.com>",
