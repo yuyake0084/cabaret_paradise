@@ -2,7 +2,7 @@
   <header>
     <div class="inner">
       <router-link to="/" class="lyt-header__logo__link">
-        <h1 class="lyt-header__logo"></h1>
+        <h1 class="lyt-header__logo">Cabaret Paradise</h1>
       </router-link>
     </div>
   </header>
@@ -24,6 +24,10 @@
     &__logo {
       position: relative;
       height: 50px;
+      line-height: 50px;
+      color: #fff;
+      font-size: 40px;
+      font-family: 'Tangerine', cursive;
 
       &::before {
         content: "";
@@ -31,6 +35,7 @@
         position: absolute;
         top: 0;
         bottom: 0;
+        left: -60px;
         margin: auto;
         background: url(/img/01.png) no-repeat 7px center;
         background-size: cover;
@@ -44,6 +49,7 @@
         position: absolute;
         top: 0;
         bottom: 0;
+        right: -140px;
         margin: auto;
         left: 65px;
         background: url(/img/02.png) no-repeat;
@@ -54,7 +60,9 @@
 
       &__link {
         display: block;
-        width: 120px;
+        width: 220px;
+        margin: 0 auto;
+        text-decoration: none;
       }
     }
   }
