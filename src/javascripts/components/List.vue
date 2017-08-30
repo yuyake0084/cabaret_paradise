@@ -29,8 +29,8 @@
   .list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 70px;
+    justify-content: space-around;
+    margin: 70px 0;
 
     @media screen and (max-width: 600px) {
       margin-top: 30px;
