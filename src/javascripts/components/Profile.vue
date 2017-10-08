@@ -138,4 +138,25 @@
     cursor: pointer;
   }
 
+  @media only screen and (max-width: 768px) {
+    .img-wrapper {
+      width: auto;
+      padding: 10px;
+      margin: 0;
+    }
+
+    .img-area__img {
+      width: 100%;
+    }
+
+    .right-content,
+    .woman-information {
+      width: 100%;
+    }
+
+    .right-content form input {
+      margin: 0 auto;
+    }
+  }
+
 </style>
